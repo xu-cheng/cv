@@ -1,0 +1,196 @@
+@article{VLDBJ:geo-social-group-queries,
+    author = {Zhu, Qijun
+              and Hu, Haibo
+              and Xu, Cheng
+              and Xu, Jianliang
+              and Lee, Wang-Chien},
+    author+an = {3=highlight},
+    title = {Geo-social group queries with minimum acquaintance constraints},
+    journal = {The VLDB Journal (\textbf{VLDBJ})},
+    year = {2017},
+    month = {7},
+    day = {19},
+    volume = {26},
+    number = {5},
+    pages = {709--727},
+    issn = {0949-877X},
+    doi = {10.1007/s00778-017-0473-6},
+    url = {https://doi.org/10.1007/s00778-017-0473-6},
+    eprint_url = {https://xuc.me/file/paper/VLDBJ17.pdf},
+    poster_url = {https://xuc.me/file/poster/VLDBJ17.pdf},
+    addendum = {Full Paper},
+    abstract = {The prosperity of location-based social networking has paved the way for new applications of group-based activity planning and marketing. While such applications heavily rely on geo-social group queries (GSGQs), existing studies fail to produce a cohesive group in terms of user acquaintance. In this paper, we propose a new family of GSGQs with minimum acquaintance constraints. They are more appealing to users as they guarantee a worst-case acquaintance level in the result group. For efficient processing of GSGQs on large location-based social networks, we devise two social-aware spatial index structures, namely SaR-tree and SaR*-tree. The latter improves on the former by considering both spatial and social distances when clustering objects. Based on SaR-tree and SaR*-tree, novel algorithms are developed to process various GSGQs. Extensive experiments on real datasets Gowalla and Twitter show that our proposed methods substantially outperform the baseline algorithms under various system settings.},
+}
+
+@article{TKDE:auth-aggregate-queries,
+    author = {Xu, Cheng
+              and Chen, Qian
+              and Hu, Haibo
+              and Xu, Jianliang
+              and Hei, Xiaojun},
+    author+an = {1=highlight},
+    title = {Authenticating Aggregate Queries over Set-Valued Data with Confidentiality},
+    journal = {IEEE Transactions on Knowledge and Data Engineering (\textbf{TKDE})},
+    year = {2018},
+    month = {4},
+    day = {1},
+    volume = {30},
+    number = {4},
+    pages = {630--644},
+    issn = {1041-4347},
+    doi = {10.1109/TKDE.2017.2773541},
+    url = {https://doi.org/10.1109/TKDE.2017.2773541},
+    eprint_url = {https://xuc.me/file/paper/TKDE18.pdf},
+    poster_url = {https://xuc.me/file/poster/TKDE18.pdf},
+    addendum = {Full Paper},
+    abstract = {With recent advances in data-as-a-service (DaaS) and cloud computing, aggregate query services over set-valued data are becoming widely available for business intelligence that drives decision making. However, as the service provider is often a third-party delegate of the data owner, the integrity of the query results cannot be guaranteed and  is thus imperative to be authenticated. Unfortunately, existing query authentication techniques either do not work for set-valued data or they lack data confidentiality. In this paper, we propose authenticated aggregate queries over set-valued data that not only ensure the integrity of query results but also preserve the confidentiality of source data. As many aggregate queries are composed of multiset operations such as set union and subset, we first develop a family of privacy-preserving authentication protocols for primitive multiset operations. Using these protocols as building blocks, we present a privacy-preserving authentication framework for various aggregate queries and further optimize their authentication performance. Security analysis and empirical evaluation show that our proposed privacy-preserving authentication techniques are feasible and robust under a wide range of system workloads.},
+}
+
+@inproceedings{WTSC18:auth-smart-contracts,
+    author = {Tang, Yuzhe
+              and Xing, Zihao
+              and Xu, Cheng
+              and Chen, Ju
+              and Xu, Jianliang},
+    author+an = {3=highlight},
+    title = {Lightweight Logging over the Blockchain for Data-Intensive Applications},
+    booktitle = {2nd Workshop on Trusted Smart Contracts at International Conference on Financial Cryptography and Data Security},
+    year = {2018},
+    month = {3},
+    address = {Santa Barbara Beach Resort, Curaçao},
+    pages = {308--324},
+    isbn = {978-3-662-58820-8},
+    doi = {10.1007/978-3-662-58820-8_21},
+    url = {https://doi.org/10.1007/978-3-662-58820-8_21},
+    addendum = {Workshop Paper},
+    abstract = {With the recent success of cryptocurrency, Blockchain’s design opens the door of building trustworthy distributed systems. A common paradigm is to repurpose the Blockchain as an append-only log that logs the application events in time order for subsequent auditing and query verification. While this paradigm reaps the security benefit, it faces technical challenges especially when being used for data-intensive applications. Instead of treating Blockchain as a time-ordered log, we propose to lay the log-structured merge tree (LSM tree) over the Blockchain for efficient and lightweight logging. Comparing other data structures, the LSM tree is advantageous in supporting efficient writes while enabling random-access reads. In our system design, only a small digest of an LSM tree is persisted in the Blockchain and minimal store operations are carried out by smart contracts. With the implementation in Ethereum/Solidity, we evaluate the proposed logging scheme and demonstrate its performance efficiency and effectiveness in cost saving.},
+}
+
+@inproceedings{ICDE18:auth-aggregate-queries,
+    author = {Xu, Cheng
+              and Chen, Qian
+              and Hu, Haibo
+              and Xu, Jianliang
+              and Hei, Xiaojun},
+    author+an = {1=highlight},
+    title = {Authenticating Aggregate Queries over Set-Valued Data with Confidentiality (Extended Abstract)},
+    booktitle = {Proceedings of the 34th IEEE International Conference on Data Engineering (\textbf{ICDE '18})},
+    year = {2018},
+    month = {4},
+    address = {Paris, France},
+    pages = {1797--1798},
+    issn = {2375-026X},
+    doi = {10.1109/ICDE.2018.00256},
+    url = {https://doi.org/10.1109/ICDE.2018.00256},
+    eprint_url = {https://xuc.me/file/paper/ICDE18.pdf},
+    poster_url = {https://xuc.me/file/poster/TKDE18.pdf},
+    addendum = {Poster Paper},
+    abstract = {With recent advances in data-as-a-service (DaaS) and cloud computing, aggregate query services over set-valued data are becoming widely available for business intelligence that drives decision making. However, as the service provider is often a third-party delegate of the data owner, the integrity of the query results cannot be guaranteed and  is thus imperative to be authenticated. Unfortunately, existing query authentication techniques either do not work for set-valued data or they lack data confidentiality. In this paper, we propose authenticated aggregate queries over set-valued data that not only ensure the integrity of query results but also preserve the confidentiality of source data.},
+}
+
+@inproceedings{SIGMOD18:auth-access-control,
+    author = {Xu, Cheng
+              and Xu, Jianliang
+              and Hu, Haibo
+              and Au, Man Ho},
+    author+an = {1=highlight},
+    title = {When Query Authentication Meets Fine-Grained Access Control: A Zero-Knowledge Approach},
+    booktitle = {Proceedings of the 2018 ACM SIGMOD International Conference on Management of Data (\textbf{SIGMOD '18})},
+    year = {2018},
+    month = {6},
+    address = {Houston, TX, USA},
+    pages = {147--162},
+    isbn = {978-1-4503-4703-7},
+    doi = {10.1145/3183713.3183741},
+    url = {https://doi.org/10.1145/3183713.3183741},
+    eprint_url = {https://xuc.me/file/paper/SIGMOD18.pdf},
+    slides_url = {https://xuc.me/file/slides/SIGMOD18.pdf},
+    poster_url = {https://xuc.me/file/poster/SIGMOD18.pdf},
+    addendum = {Full Paper},
+    abstract = {Query authentication has been extensively studied to ensure the integrity of query results for outsourced databases, which are often not fully trusted. However, access control, another important security feature, is largely ignored by existing works. Notably, recent breakthroughs in cryptography have enabled fine-grained access control over outsourced data. In this paper, we take the first step toward studying the problem of authenticating relational queries with fine-grained access control. The key challenge is how to protect information confidentiality during query authentication, which is essential to many critical applications. To address this challenge, we propose a novel access-policy-preserving (APP) signature as the primitive authenticated data structure. A useful property of the APP signature is that it can be used to derive customized signatures for unauthorized users to prove the inaccessibility while achieving the zero-knowledge confidentiality. We also propose a grid-index-based tree structure that can aggregate APP signatures for efficient range and join query authentication. In addition to this, a number of optimization techniques are proposed to further improve the authentication performance.  Security analysis and performance evaluation show that the proposed solutions and techniques are robust and efficient under various system settings.},
+}
+
+@inproceedings{MDM18:auth-distributed-kNN,
+    author = {Zhang, Ce
+              and Xu, Cheng
+              and Xu, Jianliang
+              and Choi, Byron},
+    author+an = {2=highlight},
+    title = {Distributed {kNN} Query Authentication},
+    booktitle = {Proceedings of the 19th IEEE International Conference on Mobile Data Management (\textbf{MDM '18})},
+    year = {2018},
+    month = {6},
+    address = {Aalborg, Denmark},
+    pages = {167--176},
+    issn = {2375-0324},
+    doi = {10.1109/mdm.2018.00034},
+    url = {https://doi.org/10.1109/mdm.2018.00034},
+    eprint_url = {https://xuc.me/file/paper/MDM18.pdf},
+    addendum = {Full Paper},
+    abstract = {With the prevalence of location-based services and geo-functioned devices, the trend of spatial data outsourcing is rising. In the data outsourcing scenario, result integrity must be ensured by means of a query authentication scheme. However, most of the existing studies are confined to a centralized environment. In this paper, we investigate the query authentication problem in distributed environments and focus on the $k$ nearest neighbor (kNN) query, which is widely used in spatial data analytics. We design a new distributed spatial authenticated data structure (ADS), distributed MR-tree, to facilitate efficient kNN processing. Furthermore, we propose a basic algorithm to process authenticated kNN queries based on the new ADS. Apart from the results, some verification objects are generated to guarantee the results’ integrity. We also design two optimized algorithms to reduce the size of verification objects as well as the verification cost. Our experiments validate the good performance of the proposed techniques in terms of query cost, communication overhead, and verification time.},
+}
+
+@inproceedings{SIGMOD19:vchain,
+    author = {Xu, Cheng
+              and Zhang, Ce
+              and Xu, Jianliang},
+    author+an = {1=highlight},
+    title = {{vChain}: Enabling Verifiable Boolean Range Queries over Blockchain Databases},
+    booktitle = {Proceedings of the 2019 ACM SIGMOD International Conference on Management of Data (\textbf{SIGMOD '19})},
+    year = {2019},
+    month = {6},
+    address = {Amsterdam, Netherlands},
+    doi = {10.1145/3299869.3300083},
+    eprint_url = {https://xuc.me/file/paper/SIGMOD19.pdf},
+    addendum = {Full Paper},
+    abstract = {Blockchains have recently been under the spotlight due to the boom of cryptocurrencies and decentralized applications. There is an increasing demand for querying the data stored in a blockchain database. To ensure query integrity, the user can maintain the entire blockchain database and query the data locally. However, this approach is not economic, if not infeasible, because of the blockchain's huge data size and considerable maintenance costs. In this paper, we take the first step toward investigating the problem of verifiable query processing over blockchain databases. We propose a novel framework, called vChain, that alleviates the storage and computing costs of the user and employs verifiable queries to guarantee the results' integrity. To support verifiable Boolean range queries, we propose an accumulator-based authenticated data structure that enables dynamic aggregation over arbitrary query attributes. Two new indexes are further developed to aggregate intra-block and inter-block data records for efficient query verification. We also propose an inverted prefix tree structure to accelerate the processing of a large number of subscription queries simultaneously. Security analysis and empirical study validate the robustness and practicality of the proposed techniques.},
+}
+
+@inproceedings{ICDE19:vabs,
+    author = {Ji, Yang
+              and Xu, Cheng
+              and Xu, Jianliang
+              and Hu, Haibo},
+    author+an = {2=highlight},
+    title = {{vABS}: Towards Verifiable Attribute-Based Search over Shared Cloud Data},
+    booktitle = {Proceedings of the 35th IEEE International Conference on Data Engineering (\textbf{ICDE '19})},
+    year = {2019},
+    month = {4},
+    address = {Macau SAR, China},
+    eprint_url = {https://xuc.me/file/paper/ICDE19a.pdf},
+    addendum = {Demo Paper},
+    abstract = {With the proliferation of cloud computing and data-as-a-service (DaaS), more and more organizations and individuals outsource their data to a third-party service provider. While enjoying the benefits of cloud-based data outsourcing, the data owners are at the risk of losing control of data integrity and access management. In this demonstration, we present a system called vABS, which enables verifiable Attribute-Based Search over shared cloud data. The vABS system adopts the common DaaS architecture, in which the server provides search services to users on behalf of data owners. By employing a novel zero-knowledge approach proposed in our prior work, vABS not only provides users with good search experiences, but also supports authenticated query processing with fine-grained access control, which is crucial to many high-security applications.},
+}
+
+@inproceedings{ICDE19:imageproof,
+    author = {Guo, Shangwei
+              and Xu, Jianliang
+              and Zhang, Ce
+              and Xu, Cheng
+              and Xiang, Tao},
+    author+an = {4=highlight},
+    title = {{ImageProof}: Enabling Authentication for Large-Scale Image Retrieval},
+    booktitle = {Proceedings of the 35th IEEE International Conference on Data Engineering (\textbf{ICDE '19})},
+    year = {2019},
+    month = {4},
+    address = {Macau SAR, China},
+    addendum = {Full Paper},
+    abstract = {With the explosive growth of online images and the popularity of search engines, a great demand has arisen for small and medium-sized enterprises to build and outsource large-scale image retrieval systems to cloud platforms. While reducing storage and retrieval burdens, enterprises are at risk of facing untrusted cloud service providers. In this paper, we take the first step in studying the problem of query authentication for large-scale image retrieval. Due to the large size of image files, the main challenges are to (i) design efficient authenticated data structures (ADSs) and (ii) balance search, communication, and verification complexities. To address these challenges, we propose two novel ADSs, the Merkle randomized k-d tree and the Merkle inverted index with cuckoo filters, to ensure the integrity of query results in each step of image retrieval. For each ADS, we develop corresponding search and verification algorithms on the basis of a series of systemic design strategies. Furthermore, we put together the ADSs and algorithms to design the final authentication scheme for image retrieval, which we name ImageProof. We also propose several optimization techniques to improve the performance of the proposed ImageProof scheme. Security analysis and extensive experiments are performed to show the robustness and efficiency of ImageProof.},
+}
+
+@inproceedings{ICDE19:gem2-tree,
+    author = {Zhang, Ce
+              and Xu, Cheng
+              and Xu, Jianliang
+              and Tang, Yuzhe
+              and Choi, Byron},
+    author+an = {2=highlight},
+    title = {{GEM\^{}2-Tree}: A Gas-Efficient Structure for Authenticated Range Queries in Blockchain},
+    booktitle = {Proceedings of the 35th IEEE International Conference on Data Engineering (\textbf{ICDE '19})},
+    year = {2019},
+    month = {4},
+    address = {Macau SAR, China},
+    addendum = {Full Paper},
+    abstract = {Blockchain technology has attracted much attention due to the great success of the cryptocurrencies. Owing to its immutability property and consensus protocol, blockchain offers a new solution for trusted storage and computation services. To scale up the services, prior research has suggested a hybrid storage architecture, where only small meta-data are stored on-chain and the raw data are outsourced to off-chain storage. To protect data integrity, a cryptographic proof can be constructed online for queries over the data stored in the system. However, the previous schemes only support simple key-value queries. In this paper, we take the first step toward studying authenticated range queries in the hybrid-storage blockchain. The key challenge lies in how to design an authenticated data structure (ADS) that can be efficiently maintained by the blockchain, in which a unique \emph{gas} cost model is employed. By analyzing the performance of the existing techniques, we propose a novel ADS, called {GEM$^2$-tree}, which is not only gas-efficient but also effective in supporting authenticated queries. To further reduce the ADS maintenance cost without sacrificing much the query performance, we also propose an optimized structure, {GEM$^{2*}$-tree}, by designing a two-level index structure. Theoretical analysis and empirical evaluation validate the performance of the proposed ADSs.},
+}
+
