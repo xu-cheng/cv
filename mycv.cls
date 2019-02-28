@@ -69,8 +69,6 @@
 \newcommand*{\homepage}[1]{\gdef\@homepage{#1}}
 \newcommand*{\github}[1]{\gdef\@github{#1}}
 \newcommand*{\linkedin}[1]{\gdef\@linkedin{#1}}
-\newcommand*{\googlescholar}[1]{\gdef\@googlescholar{#1}}
-\newcommand*{\dblp}[1]{\gdef\@dblp{#1}}
 
 % Custom styles
 \RequirePackage{titlesec}
@@ -125,7 +123,7 @@
         }%
         \ifthenelse{\isundefined{\@email}}{}{%
           \ifbool{isstart}{\setbool{isstart}{false}}{~~$\cdot$~~}%
-          \faIcon{envelope}~\href{mailto:\@email}{\@email}%
+          \href{mailto:\@email}{\faIcon{envelope}~\@email}%
         }%
         \ifthenelse{\isundefined{\@mobile} \AND \isundefined{\@email}}{}{\\}%
         \setbool{isstart}{true}%
@@ -213,7 +211,7 @@
 \renewcommand*{\mkbibnameprefix}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}}
 \renewcommand*{\mkbibnamesuffix}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}}
 \DeclareFieldFormat{addendum}{\textcolor{Gray}{#1}}
-\defbibenvironment{bibliography}{\begin{enumerate}}{\end{enumerate}} {\item}
+\defbibenvironment{bibliography}{\begin{enumerate}}{\end{enumerate}}{\item}
 
 \newcommand*{\publications}[1]{%
   \begin{refsection}[#1]
