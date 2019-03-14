@@ -23,7 +23,7 @@
 \RequirePackage{hyperref}
 \hypersetup{
   unicode,
-  hidelinks=true,
+  hidelinks,
   bookmarksopen=true,
   bookmarksopenlevel=1,
   pdfstartview={XYZ null null 1},
