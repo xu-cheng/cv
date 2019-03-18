@@ -89,7 +89,7 @@
 }
 
 % \printdate{date}
-\newcommand*{\printdate}[1]{\hspace*{\fill}{\slshape#1}}%
+\newcommand*{\printdate}[1]{\hspace*{\fill}{\itshape#1}}%
 
 % \begin{positions}
 %   \entry{<title>}{<date>}
