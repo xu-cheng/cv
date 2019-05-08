@@ -162,7 +162,7 @@
   \end{adjustwidth}
 }
 
-% Foot
+% Footer
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
