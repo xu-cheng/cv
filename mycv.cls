@@ -83,6 +83,8 @@
 \newcommand*{\homepage}[1]{\gdef\@homepage{#1}}
 \newcommand*{\github}[1]{\gdef\@github{#1}}
 \newcommand*{\linkedin}[1]{\gdef\@linkedin{#1}}
+\renewcommand*{\date}[1]{\gdef\@date{#1}}
+\date{\today}
 
 % Custom styles
 \RequirePackage{titlesec}
@@ -166,7 +168,7 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhfoffset[l]{\dimexpr\Gm@lmargin-\Gm@rmargin\relax}
-\fancyfoot[L]{\textcolor{Gray}{\today}}
+\fancyfoot[L]{\textcolor{Gray}{\@date}}
 \fancyfoot[C]{\textcolor{Gray}{\@name~~~$\cdot$~~~Curriculum Vitae}}
 \fancyfoot[R]{\textcolor{Gray}{\thepage}}
 
