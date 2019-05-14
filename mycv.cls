@@ -184,6 +184,21 @@
   sorting=ddatent,
 ]{biblatex}
 
+% declare custom field `usera` as the starting page
+% Ref: https://tex.stackexchange.com/a/485880/16996
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=pages, final]
+      \step[fieldset=usera, origfieldval]
+      \step[fieldsource=usera,
+        match=\regexp{\A\s*(\p{Nd}+)\s*(\p{Pd}+)\s*(\p{Nd}+)\s*\z},
+        replace=\regexp{$1}
+      ]
+    }
+  }
+}
+
 \DeclareSortingTemplate{ddatent}{
   \sort{
     \field{presort}
@@ -204,9 +219,21 @@
     \field[padside=left,padwidth=2,padchar=0]{day}
     \literal{00}
   }
+  \sort{
+    \field{booktitle}
+    \field{journaltitle}
+  }
   \sort[direction=descending]{
     \field[padside=left,padwidth=4,padchar=0]{volume}
     \literal{9999}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=4,padchar=0]{number}
+    \literal{9999}
+  }
+  \sort{
+    \field[padside=left,padwidth=4,padchar=0]{usera}
+    \literal{0000}
   }
   \sort{
     \field{sortname}
