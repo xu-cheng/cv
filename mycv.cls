@@ -1,4 +1,4 @@
-% Copyright (C) 2019 by Cheng Xu <copyright@xuc.me>
+% Copyright (C) 2019 by Cheng XU <copyright@xuc.me>
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -10,7 +10,7 @@
 %
 % This work has the LPPL maintenance status `maintained'.
 %
-% The Current Maintainer of this work is Cheng Xu.
+% The Current Maintainer of this work is Cheng XU.
 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesClass{mycv}
