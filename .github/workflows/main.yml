@@ -1,0 +1,38 @@
+name: Github Actions CI
+on:
+  push:
+    branches: master
+  pull_request:
+    branches: master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v1
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: cv.tex
+        extra_packages: "biblatex-ieee"
+    - name: Check pdf file
+      run: |
+        file cv.pdf | grep -q ' PDF '
+    - name: Set up uploading Git repository
+      uses: actions/checkout@v1
+      with:
+        repository: https://github.com/xu-cheng/website
+        path: /github/workspace/website/
+      if: github.event_name == 'push' && github.branch == 'master'
+    - name: Upload cv.pdf
+      run: |
+        set -e
+        cp -f cv.pdf /github/workspace/website/file/cv.pdf
+        cd /github/workspace/website
+        git config --global user.name "Cheng XU"
+        git config --global user.email "git@xuc.me"
+        git add file/cv.pdf
+        git diff --exit-code HEAD -- file/cv.pdf && exit 0
+        git commit -m "[github actions] update cv"
+        git push
+      if: github.event_name == 'push' && github.branch == 'master'
