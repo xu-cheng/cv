@@ -29,9 +29,9 @@ jobs:
         chmod 600 ~/.ssh/id_ed25519
         git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
-        git clone --depth=1 git@github.com:xu-cheng/website.git /github/workspace/website
-        cp -f cv.pdf /github/workspace/website/file/cv.pdf
-        cd /github/workspace/website
+        git clone --depth=1 git@github.com:xu-cheng/website.git "$GITHUB_WORKSPACE/website"
+        cp -f cv.pdf "$GITHUB_WORKSPACE/website/file/cv.pdf"
+        cd "$GITHUB_WORKSPACE/website"
         git add file/cv.pdf
         git diff --exit-code HEAD -- file/cv.pdf && exit 0
         git commit -m "[github actions] update cv"
