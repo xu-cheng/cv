@@ -1,5 +1,7 @@
 # CV
 
+[![GitHub Actions Status](https://github.com/xu-cheng/cv/workflows/Github%20Actions%20CI/badge.svg)](https://github.com/xu-cheng/cv/actions)
+
 This is my CV. Inspired by:
 
 * [Jian Xu's CV](http://www.jianxu.net/en/files/JianXu_CV.pdf)
