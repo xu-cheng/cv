@@ -11,14 +11,11 @@ jobs:
       uses: xu-cheng/latex-action@master
       with:
         root_file: cv.tex
-        extra_packages: "biblatex-ieee"
     - name: Check pdf file
       run: |
         file cv.pdf | grep -q ' PDF '
     - name: Upload cv.pdf
       run: |
-        set -e
-
         # configure git
         git config --global user.name "Cheng XU"
         git config --global user.email "git@xuc.me"
@@ -34,7 +31,6 @@ jobs:
         cp -f cv.pdf "$GITHUB_WORKSPACE/website/file/cv.pdf"
         cd "$GITHUB_WORKSPACE/website"
         git add file/cv.pdf
-        git diff --exit-code HEAD -- file/cv.pdf && exit 0
         git commit -m "[github actions] update cv"
         git push
       env:
