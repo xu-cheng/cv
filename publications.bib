@@ -218,3 +218,18 @@
     abstract = {Blockchain technology has attracted much attention due to the great success of the cryptocurrencies. Owing to its immutability property and consensus protocol, blockchain offers a new solution for trusted storage and computation services. To scale up the services, prior research has suggested a hybrid storage architecture, where only small meta-data are stored on-chain and the raw data are outsourced to off-chain storage. To protect data integrity, a cryptographic proof can be constructed online for queries over the data stored in the system. However, the previous schemes only support simple key-value queries. In this paper, we take the first step toward studying authenticated range queries in the hybrid-storage blockchain. The key challenge lies in how to design an authenticated data structure (ADS) that can be efficiently maintained by the blockchain, in which a unique \emph{gas} cost model is employed. By analyzing the performance of the existing techniques, we propose a novel ADS, called {GEM$^2$-tree}, which is not only gas-efficient but also effective in supporting authenticated queries. To further reduce the ADS maintenance cost without sacrificing much the query performance, we also propose an optimized structure, {GEM$^{2*}$-tree}, by designing a two-level index structure. Theoretical analysis and empirical evaluation validate the performance of the proposed ADSs.},
 }
 
+@inproceedings{ICDE20:vcbir,
+    author = {Guo, Shangwei,
+              and Ji, Yang
+              and Zhang, Ce
+              and Xu, Cheng
+              and Xu, Jianliang},
+    author+an = {4=highlight},
+    title = {{vCBIR}: A Verifiable Search Engine for Content-Based Image Retrieval},
+    booktitle = {Proceedings of the 36th IEEE International Conference on Data Engineering (\textbf{ICDE '20})},
+    year = {2020},
+    month = {4},
+    address = {Dallas, Texas, USA},
+    addendum = {Demo Paper},
+    abstract = {We demonstrate vCBIR, a verifiable search engine for Content-Based Image Retrieval. vCBIR allows a small or medium-sized enterprise to outsource its image database to a cloud-based service provider and ensures the integrity of query processing. Like other common data-as-a-service (DaaS) systems, vCBIR consists of three parties: (i) the image owner who outsources its database, (ii) the service provider who executes the authenticated query processing, and (iii) the client who issues search queries. By employing a novel query authentication scheme proposed in our prior work, the system not only supports cloud-based image retrieval, but also generates a cryptographic proof for each query, by which the client could verify the integrity of query results. During the demonstration, we will showcase the usage of vCBIR and also provide attendees interactive experience of verifying query results against an untrustworthy service provider through graphical user interface (GUI).},
+}
