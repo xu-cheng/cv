@@ -256,9 +256,13 @@
 \DeclareFieldFormat{addendum}{\textcolor{Gray}{#1}}
 \defbibenvironment{bibliography}{\begin{enumerate}}{\end{enumerate}}{\item}
 
-\newcommand*{\publications}[1]{%
-  \begin{refsection}[#1]
+\newcommand*{\publications}[2][]{%
+  \begin{refsection}[#2]
     \nocite{*}
-    \printbibliography[heading=none]%
+    \ifthenelse{\equal{#1}{}}{%
+      \printbibliography[heading=none]%
+    }{%
+      \printbibliography[heading=none,#1]%
+    }
   \end{refsection}
 }
