@@ -44,6 +44,7 @@
   pdfpagemode={UseOutlines},
   pdfpagelayout={OneColumn},
 }
+\urlstyle{same}
 
 % Page layout
 \RequirePackage{geometry}
@@ -139,13 +140,13 @@
         }%
         \ifthenelse{\isundefined{\@email}}{}{%
           \ifbool{isstart}{\setbool{isstart}{false}}{~~$\cdot$~~}%
-          \href{mailto:\@email}{\faIcon{envelope}~\@email}%
+          \href{mailto:\@email}{\faIcon{envelope}~\nolinkurl{\@email}}%
         }%
         \ifthenelse{\isundefined{\@mobile} \AND \isundefined{\@email}}{}{\\}%
         \setbool{isstart}{true}%
         \ifthenelse{\isundefined{\@homepage}}{}{%
           \ifbool{isstart}{\setbool{isstart}{false}}{~~$\cdot$~~}%
-          \href{\@homepage}{\faIcon{home}~\@homepage}%
+          \href{\@homepage}{\faIcon{home}~\nolinkurl{\@homepage}}%
         }%
         \ifthenelse{\isundefined{\@github}}{}{%
           \ifbool{isstart}{\setbool{isstart}{false}}{~~$\cdot$~~}%
