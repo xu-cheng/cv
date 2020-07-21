@@ -77,7 +77,10 @@
 \RequirePackage{xparse}
 
 % Personal info
-\newcommand*{\name}[1]{\gdef\@name{#1}}
+\NewDocumentCommand{\name}{o m}{%
+  \gdef\@name{#2}
+  \IfValueTF{#1}{\gdef\@shortname{#1}}{\gdef\@shortname{#2}}
+}
 \newcommand*{\address}[1]{\gdef\@address{#1}}
 \newcommand*{\phone}[1]{\gdef\@phone{#1}}
 \newcommand*{\email}[1]{\gdef\@email{#1}}
@@ -170,7 +173,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancyhfoffset[l]{\dimexpr\Gm@lmargin-\Gm@rmargin\relax}
 \fancyfoot[L]{\textcolor{Gray}{\@date}}
-\fancyfoot[C]{\textcolor{Gray}{\@name~~~$\cdot$~~~Curriculum Vitae}}
+\fancyfoot[C]{\textcolor{Gray}{\@shortname~~~$\cdot$~~~Curriculum Vitae}}
 \fancyfoot[R]{\textcolor{Gray}{\thepage}}
 
 % Publication
