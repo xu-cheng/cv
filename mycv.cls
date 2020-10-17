@@ -34,6 +34,7 @@
 
 % hyperref setting
 \RequirePackage[a-1b]{pdfx}
+\catcode30=12 % https://github.com/plk/biblatex/issues/1044
 \RequirePackage{hyperref}
 \hypersetup{
   unicode,
