@@ -261,13 +261,13 @@
 \DeclareFieldFormat{addendum}{\textcolor{Gray}{#1}}
 \defbibenvironment{bibliography}{\begin{enumerate}}{\end{enumerate}}{\item}
 
-\newcommand*{\publications}[2][]{%
+\NewDocumentCommand{\publications}{o m}{%
   \begin{refsection}[#2]
     \nocite{*}
-    \ifthenelse{\equal{#1}{}}{%
-      \printbibliography[heading=none]%
-    }{%
+    \IfValueTF{#1}{%
       \printbibliography[heading=none,#1]%
+    }{%
+      \printbibliography[heading=none]%
     }
   \end{refsection}
 }
