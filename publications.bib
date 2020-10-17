@@ -20,6 +20,7 @@
     poster_url = {https://xuc.me/file/poster/VLDBJ17.pdf},
     addendum = {Full Paper},
     abstract = {The prosperity of location-based social networking has paved the way for new applications of group-based activity planning and marketing. While such applications heavily rely on geo-social group queries (GSGQs), existing studies fail to produce a cohesive group in terms of user acquaintance. In this paper, we propose a new family of GSGQs with minimum acquaintance constraints. They are more appealing to users as they guarantee a worst-case acquaintance level in the result group. For efficient processing of GSGQs on large location-based social networks, we devise two social-aware spatial index structures, namely SaR-tree and SaR*-tree. The latter improves on the former by considering both spatial and social distances when clustering objects. Based on SaR-tree and SaR*-tree, novel algorithms are developed to process various GSGQs. Extensive experiments on real datasets Gowalla and Twitter show that our proposed methods substantially outperform the baseline algorithms under various system settings.},
+    keywords = {selected},
 }
 
 @article{TKDE:auth-aggregate-queries,
@@ -44,6 +45,7 @@
     poster_url = {https://xuc.me/file/poster/TKDE18.pdf},
     addendum = {Full Paper},
     abstract = {With recent advances in data-as-a-service (DaaS) and cloud computing, aggregate query services over set-valued data are becoming widely available for business intelligence that drives decision making. However, as the service provider is often a third-party delegate of the data owner, the integrity of the query results cannot be guaranteed and  is thus imperative to be authenticated. Unfortunately, existing query authentication techniques either do not work for set-valued data or they lack data confidentiality. In this paper, we propose authenticated aggregate queries over set-valued data that not only ensure the integrity of query results but also preserve the confidentiality of source data. As many aggregate queries are composed of multiset operations such as set union and subset, we first develop a family of privacy-preserving authentication protocols for primitive multiset operations. Using these protocols as building blocks, we present a privacy-preserving authentication framework for various aggregate queries and further optimize their authentication performance. Security analysis and empirical evaluation show that our proposed privacy-preserving authentication techniques are feasible and robust under a wide range of system workloads.},
+    keywords = {selected},
 }
 
 @inproceedings{WTSC18:auth-smart-contracts,
@@ -108,6 +110,7 @@
     poster_url = {https://xuc.me/file/poster/SIGMOD18.pdf},
     addendum = {Full Paper},
     abstract = {Query authentication has been extensively studied to ensure the integrity of query results for outsourced databases, which are often not fully trusted. However, access control, another important security feature, is largely ignored by existing works. Notably, recent breakthroughs in cryptography have enabled fine-grained access control over outsourced data. In this paper, we take the first step toward studying the problem of authenticating relational queries with fine-grained access control. The key challenge is how to protect information confidentiality during query authentication, which is essential to many critical applications. To address this challenge, we propose a novel access-policy-preserving (APP) signature as the primitive authenticated data structure. A useful property of the APP signature is that it can be used to derive customized signatures for unauthorized users to prove the inaccessibility while achieving the zero-knowledge confidentiality. We also propose a grid-index-based tree structure that can aggregate APP signatures for efficient range and join query authentication. In addition to this, a number of optimization techniques are proposed to further improve the authentication performance.  Security analysis and performance evaluation show that the proposed solutions and techniques are robust and efficient under various system settings.},
+    keywords = {selected},
 }
 
 @inproceedings{MDM18:auth-distributed-kNN,
@@ -128,6 +131,7 @@
     eprint_url = {https://xuc.me/file/paper/MDM18.pdf},
     addendum = {Full Paper},
     abstract = {With the prevalence of location-based services and geo-functioned devices, the trend of spatial data outsourcing is rising. In the data outsourcing scenario, result integrity must be ensured by means of a query authentication scheme. However, most of the existing studies are confined to a centralized environment. In this paper, we investigate the query authentication problem in distributed environments and focus on the $k$ nearest neighbor (kNN) query, which is widely used in spatial data analytics. We design a new distributed spatial authenticated data structure (ADS), distributed MR-tree, to facilitate efficient kNN processing. Furthermore, we propose a basic algorithm to process authenticated kNN queries based on the new ADS. Apart from the results, some verification objects are generated to guarantee the results’ integrity. We also design two optimized algorithms to reduce the size of verification objects as well as the verification cost. Our experiments validate the good performance of the proposed techniques in terms of query cost, communication overhead, and verification time.},
+    keywords = {selected},
 }
 
 @inproceedings{SIGMOD19:vchain,
@@ -149,6 +153,7 @@
     poster_url = {https://xuc.me/file/poster/SIGMOD19.pdf},
     addendum = {Full Paper},
     abstract = {Blockchains have recently been under the spotlight due to the boom of cryptocurrencies and decentralized applications. There is an increasing demand for querying the data stored in a blockchain database. To ensure query integrity, the user can maintain the entire blockchain database and query the data locally. However, this approach is not economic, if not infeasible, because of the blockchain's huge data size and considerable maintenance costs. In this paper, we take the first step toward investigating the problem of verifiable query processing over blockchain databases. We propose a novel framework, called vChain, that alleviates the storage and computing costs of the user and employs verifiable queries to guarantee the results' integrity. To support verifiable Boolean range queries, we propose an accumulator-based authenticated data structure that enables dynamic aggregation over arbitrary query attributes. Two new indexes are further developed to aggregate intra-block and inter-block data records for efficient query verification. We also propose an inverted prefix tree structure to accelerate the processing of a large number of subscription queries simultaneously. Security analysis and empirical study validate the robustness and practicality of the proposed techniques.},
+    keywords = {selected},
 }
 
 @inproceedings{ICDE19:vabs,
@@ -170,6 +175,7 @@
     poster_url = {https://xuc.me/file/poster/ICDE19a.pdf},
     addendum = {Demo Paper},
     abstract = {With the proliferation of cloud computing and data-as-a-service (DaaS), more and more organizations and individuals outsource their data to a third-party service provider. While enjoying the benefits of cloud-based data outsourcing, the data owners are at the risk of losing control of data integrity and access management. In this demonstration, we present a system called vABS, which enables verifiable Attribute-Based Search over shared cloud data. The vABS system adopts the common DaaS architecture, in which the server provides search services to users on behalf of data owners. By employing a novel zero-knowledge approach proposed in our prior work, vABS not only provides users with good search experiences, but also supports authenticated query processing with fine-grained access control, which is crucial to many high-security applications.},
+    keywords = {selected},
 }
 
 @inproceedings{ICDE19:imageproof,
@@ -193,6 +199,7 @@
     poster_url = {https://xuc.me/file/poster/ICDE19c.pdf},
     addendum = {Full Paper},
     abstract = {With the explosive growth of online images and the popularity of search engines, a great demand has arisen for small and medium-sized enterprises to build and outsource large-scale image retrieval systems to cloud platforms. While reducing storage and retrieval burdens, enterprises are at risk of facing untrusted cloud service providers. In this paper, we take the first step in studying the problem of query authentication for large-scale image retrieval. Due to the large size of image files, the main challenges are to (i) design efficient authenticated data structures (ADSs) and (ii) balance search, communication, and verification complexities. To address these challenges, we propose two novel ADSs, the Merkle randomized k-d tree and the Merkle inverted index with cuckoo filters, to ensure the integrity of query results in each step of image retrieval. For each ADS, we develop corresponding search and verification algorithms on the basis of a series of systemic design strategies. Furthermore, we put together the ADSs and algorithms to design the final authentication scheme for image retrieval, which we name ImageProof. We also propose several optimization techniques to improve the performance of the proposed ImageProof scheme. Security analysis and extensive experiments are performed to show the robustness and efficiency of ImageProof.},
+    keywords = {selected},
 }
 
 @inproceedings{ICDE19:gem2-tree,
@@ -216,6 +223,7 @@
     poster_url = {https://xuc.me/file/poster/ICDE19b.pdf},
     addendum = {Full Paper},
     abstract = {Blockchain technology has attracted much attention due to the great success of the cryptocurrencies. Owing to its immutability property and consensus protocol, blockchain offers a new solution for trusted storage and computation services. To scale up the services, prior research has suggested a hybrid storage architecture, where only small meta-data are stored on-chain and the raw data are outsourced to off-chain storage. To protect data integrity, a cryptographic proof can be constructed online for queries over the data stored in the system. However, the previous schemes only support simple key-value queries. In this paper, we take the first step toward studying authenticated range queries in the hybrid-storage blockchain. The key challenge lies in how to design an authenticated data structure (ADS) that can be efficiently maintained by the blockchain, in which a unique \emph{gas} cost model is employed. By analyzing the performance of the existing techniques, we propose a novel ADS, called {GEM$^2$-tree}, which is not only gas-efficient but also effective in supporting authenticated queries. To further reduce the ADS maintenance cost without sacrificing much the query performance, we also propose an optimized structure, {GEM$^{2*}$-tree}, by designing a two-level index structure. Theoretical analysis and empirical evaluation validate the performance of the proposed ADSs.},
+    keywords = {selected},
 }
 
 @inproceedings{ICDE20:vcbir,
@@ -236,6 +244,7 @@
     url = {https://doi.org/10.1109/ICDE48307.2020.00156},
     addendum = {Demo Paper},
     abstract = {We demonstrate vCBIR, a verifiable search engine for Content-Based Image Retrieval. vCBIR allows a small or medium-sized enterprise to outsource its image database to a cloud-based service provider and ensures the integrity of query processing. Like other common data-as-a-service (DaaS) systems, vCBIR consists of three parties: (i) the image owner who outsources its database, (ii) the service provider who executes the authenticated query processing, and (iii) the client who issues search queries. By employing a novel query authentication scheme proposed in our prior work, the system not only supports cloud-based image retrieval, but also generates a cryptographic proof for each query, by which the client could verify the integrity of query results. During the demonstration, we will showcase the usage of vCBIR and also provide attendees interactive experience of verifying query results against an untrustworthy service provider through graphical user interface (GUI).},
+    keywords = {selected},
 }
 
 @inproceedings{SIGMOD20:vchain-demo,
@@ -257,6 +266,7 @@
     video_url = {https://www.youtube.com/watch?v=A2EtTOTOXqw},
     addendum = {Demo Paper},
     abstract = {This demonstration presents vChain, a blockchain system that ensures query integrity. With the proliferation of blockchain applications and services, there has been an increasing demand for querying the data stored in a blockchain database. However, existing solutions either are at the risk of losing query integrity, or require users to maintain a full copy of the blockchain database. In comparison, by employing a novel verifiable query processing framework, vChain enables a lightweight user to authenticate the query results returned from a potentially untrusted service provider. We demonstrate its verifiable query operations, usability, and performance with visualization for better insights. We also showcase how users can detect falsified results in the case that the service provider is compromised.},
+    keywords = {selected},
 }
 
 @inproceedings{Middleware20:GRuB,
@@ -274,6 +284,7 @@
     address = {Delft, Netherlands},
     addendum = {Full Paper},
     abstract = {Feeding external data to a blockchain, a.k.a. data feed, is an essential task to enable blockchain interoperability and support emerging cross-domain applications, notably stablecoins. Given the data-intensive feeds in real life (e.g.,~high-frequency price updates) and the high cost in using blockchain, namely Gas, it is imperative to reduce the Gas cost of data feeds. Motivated by the constant-changing workloads in finance and other applications, this work focuses on designing a \emph{dynamic, workload-aware} approach for cost effectiveness in Gas. This design space is understudied in the existing blockchain research which has so far focused on static data placement. \par This work presents GRuB, a cost-effective data feed that dynamically replicates data between the blockchain and an off-chain cloud storage. GRuB's data replication is workload-adaptive by monitoring the current workload and making online decisions w.r.t.~data replication. A series of online algorithms are proposed that achieves the bounded worst-case cost in blockchain's Gas. GRuB runs the decision-making components on the untrusted cloud off-chain for lower Gas costs, and employs a security protocol to authenticate the data transferred between the blockchain and cloud. The overall GRuB system can autonomously achieve low Gas costs with changing workloads. \par We built a GRuB prototype functional with Ethereum and Google LevelDB, and supported real applications in stablecoins. Under real workloads collected from the Ethereum contract-call history and mixed workloads of YCSB, we systematically evaluate GRuB's cost which shows a saving of Gas by 10\% \~{} 74\%, with comparison to the baselines of static data-placement.},
+    keywords = {selected},
 }
 
 @inproceedings{ICDE21:blockchain-keyword-search,
@@ -290,4 +301,5 @@
     address = {Chania, Crete, Greece},
     addendum = {Full Paper},
     abstract = {Blockchain has emerged as a promising solution for secure data storage and retrieval for decentralized applications. To scale blockchain systems, a prevailing approach is to employ a hybrid storage model, where only small meta-data are stored on-chain while the raw data are outsourced to an off-chain storage service provider. The key issue for query processing in such a system is the design of \emph{gas}-efficient authenticated data structure (ADS) to authenticate the query results. In this paper, we study novel ADS schemes for authenticated keyword search in hybrid-storage blockchains. We first propose the suppressed Merkle inverted (Merkle$^{inv}$) index, which maintains only a partial ADS structure on-chain that can be securely updated with a logarithm-sized cryptographic proof. Moreover, we propose a Chameleon inverted (Chameleon$^{inv}$) index that leverages the chameleon vector commitment to achieve a constant maintenance cost. It is further optimized with Bloom filters to enhance the query and verification performance. We prove the security of the proposed ADS schemes and evaluate their performance using real datasets on the Ethereum platform. Experimental results show that, compared to a baseline solution, the proposed Merkle$^{inv}$ and Chameleon$^{inv}$ indexes reduce the average on-chain maintenance cost from US\$11.21 down to US\$2.69 and US\$0.24, respectively, without sacrificing much the query performance.},
+    keywords = {selected},
 }
