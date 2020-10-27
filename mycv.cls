@@ -255,7 +255,7 @@
 }
 
 \renewcommand*{\mkbibnamegiven}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}}
-\renewcommand*{\mkbibnamefamily}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}}
+\renewcommand*{\mkbibnamefamily}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}\ifitemannotation{dagger}{\textsuperscript{\textdagger}}}
 \renewcommand*{\mkbibnameprefix}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}}
 \renewcommand*{\mkbibnamesuffix}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}}
 \DeclareFieldFormat{addendum}{\textcolor{Gray}{#1}}
