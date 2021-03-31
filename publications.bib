@@ -175,7 +175,6 @@
     poster_url = {https://xuc.me/file/poster/ICDE19a.pdf},
     addendum = {Demo Paper},
     abstract = {With the proliferation of cloud computing and data-as-a-service (DaaS), more and more organizations and individuals outsource their data to a third-party service provider. While enjoying the benefits of cloud-based data outsourcing, the data owners are at the risk of losing control of data integrity and access management. In this demonstration, we present a system called vABS, which enables verifiable Attribute-Based Search over shared cloud data. The vABS system adopts the common DaaS architecture, in which the server provides search services to users on behalf of data owners. By employing a novel zero-knowledge approach proposed in our prior work, vABS not only provides users with good search experiences, but also supports authenticated query processing with fine-grained access control, which is crucial to many high-security applications.},
-    keywords = {selected},
 }
 
 @inproceedings{ICDE19:imageproof,
@@ -244,7 +243,6 @@
     url = {https://doi.org/10.1109/ICDE48307.2020.00156},
     addendum = {Demo Paper},
     abstract = {We demonstrate vCBIR, a verifiable search engine for Content-Based Image Retrieval. vCBIR allows a small or medium-sized enterprise to outsource its image database to a cloud-based service provider and ensures the integrity of query processing. Like other common data-as-a-service (DaaS) systems, vCBIR consists of three parties: (i) the image owner who outsources its database, (ii) the service provider who executes the authenticated query processing, and (iii) the client who issues search queries. By employing a novel query authentication scheme proposed in our prior work, the system not only supports cloud-based image retrieval, but also generates a cryptographic proof for each query, by which the client could verify the integrity of query results. During the demonstration, we will showcase the usage of vCBIR and also provide attendees interactive experience of verifying query results against an untrustworthy service provider through graphical user interface (GUI).},
-    keywords = {selected},
 }
 
 @inproceedings{SIGMOD20:vchain-demo,
@@ -306,5 +304,25 @@
     eprint_url = {https://xuc.me/file/paper/ICDE21.pdf},
     addendum = {Full Paper},
     abstract = {Blockchain has emerged as a promising solution for secure data storage and retrieval for decentralized applications. To scale blockchain systems, a prevailing approach is to employ a hybrid storage model, where only small meta-data are stored on-chain while the raw data are outsourced to an off-chain storage service provider. The key issue for query processing in such a system is the design of \emph{gas}-efficient authenticated data structure (ADS) to authenticate the query results. In this paper, we study novel ADS schemes for authenticated keyword search in hybrid-storage blockchains. We first propose the suppressed Merkle inverted (Merkle$^{inv}$) index, which maintains only a partial ADS structure on-chain that can be securely updated with a logarithm-sized cryptographic proof. Moreover, we propose a Chameleon inverted (Chameleon$^{inv}$) index that leverages the chameleon vector commitment to achieve a constant maintenance cost. It is further optimized with Bloom filters to enhance the query and verification performance. We prove the security of the proposed ADS schemes and evaluate their performance using real datasets on the Ethereum platform. Experimental results show that, compared to a baseline solution, the proposed Merkle$^{inv}$ and Chameleon$^{inv}$ indexes reduce the average on-chain maintenance cost from US\$11.21 down to US\$2.69 and US\$0.24, respectively, without sacrificing much the query performance.},
+    keywords = {selected},
+}
+
+@inproceedings{SIGMOD21:pb-trace,
+    author = {Peng, Zhe
+              and Xu, Cheng
+              and Wang, Haixin
+              and Huang, Jinbin
+              and Xu, Jianliang
+              and Chu, Xiaowen},
+    author+an = {2=highlight},
+    title = {{P\textsuperscript{2}B-Trace}: Privacy-Preserving Blockchain-based Contact Tracing to Combat Pandemics},
+    booktitle = {Proceedings of the 2021 ACM SIGMOD International Conference on Management of Data (\textbf{SIGMOD '21})},
+    year = {2021},
+    month = {6},
+    address = {Xi'an, Shaanxi, China},
+    doi = {10.1145/3448016.3459237},
+    eprint_url = {https://xuc.me/file/paper/SIGMOD21.pdf},
+    addendum = {Short Paper},
+    abstract = {The eruption of a pandemic, such as COVID-19, can cause an unprecedented global crisis. Contact tracing, as a pillar of communicable disease control in public health for decades, has shown its effectiveness on pandemic control. Despite intensive research on contact tracing, existing schemes are vulnerable to attacks and can hardly simultaneously meet the requirements of data integrity and user privacy. The design of a privacy-preserving contact tracing framework to ensure the integrity of the tracing procedure has not been sufficiently studied and remains a challenge. In this paper, we propose {P\textsuperscript{2}B-Trace}, a privacy-preserving contact tracing initiative based on blockchain. First, we design a decentralized architecture with blockchain to record an authenticated data structure of the user's contact records, which prevents the user from intentionally modifying his local records afterward. Second, we develop a zero-knowledge proximity verification scheme to further verify the user's proximity claim while protecting user privacy. We implement {P\textsuperscript{2}B-Trace} and conduct experiments to evaluate the cost of privacy-preserving tracing integrity verification. The evaluation results demonstrate the effectiveness of our proposed system.},
     keywords = {selected},
 }
