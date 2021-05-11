@@ -11,4 +11,6 @@ If you want to use this template for your CV, you need to also update the `cv.xm
 
 ## License
 
-LPPL-1.3c
+The CV template (`mycv.cls`) is licensed under LPPL-1.3c.
+
+All the personal data (`cv.tex` and `publications.bib`) is owned by Cheng XU. All rights reserved.
