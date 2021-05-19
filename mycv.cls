@@ -23,9 +23,7 @@
 \RequirePackage[l2tabu,orthodox]{nag}
 
 % Fonts
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[T1]{fontenc}
-\RequirePackage{kpfonts}
+\RequirePackage{kpfonts-otf}
 \RequirePackage[fixed]{fontawesome5}
 
 % Color

@@ -11,6 +11,7 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: cv.tex
+        latexmk_use_lualatex: true
     - name: Check pdf file
       run: |
         file cv.pdf | grep -q ' PDF '
