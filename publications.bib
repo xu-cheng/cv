@@ -340,3 +340,25 @@
     abstract = {The eruption of a pandemic, such as COVID-19, can cause an unprecedented global crisis. Contact tracing, as a pillar of communicable disease control in public health for decades, has shown its effectiveness on pandemic control. Despite intensive research on contact tracing, existing schemes are vulnerable to attacks and can hardly simultaneously meet the requirements of data integrity and user privacy. The design of a privacy-preserving contact tracing framework to ensure the integrity of the tracing procedure has not been sufficiently studied and remains a challenge. In this paper, we propose {P\textsuperscript{2}B-Trace}, a privacy-preserving contact tracing initiative based on blockchain. First, we design a decentralized architecture with blockchain to record an authenticated data structure of the user's contact records, which prevents the user from intentionally modifying his local records afterward. Second, we develop a zero-knowledge proximity verification scheme to further verify the user's proximity claim while protecting user privacy. We implement {P\textsuperscript{2}B-Trace} and conduct experiments to evaluate the cost of privacy-preserving tracing integrity verification. The evaluation results demonstrate the effectiveness of our proposed system.},
     keywords = {selected},
 }
+
+@article{PVLDB:slimchain,
+    author = {Xu, Cheng
+              and Zhang, Ce
+              and Xu, Jianliang
+              and Pei, Jian},
+    author+an = {1=highlight,dagger;2=dagger},
+    title = {{SlimChain}: Scaling Blockchain Transactions through Off-Chain Storage and Parallel Processing},
+    journal = {Proceedings of the VLDB Endowment (\textbf{PVLDB})},
+    year = {2021},
+    month = {7},
+    volume = {14},
+    number = {11},
+    issn = {2150-8097},
+    doi = {10.14778/3476249.3476283},
+    eprint_url = {https://xuc.me/file/paper/PVLDB21.pdf},
+    techreport_url = {https://xuc.me/file/techreport/PVLDB21.pdf},
+    code_url = {https://github.com/hkbudb/slimchain},
+    addendum = {Full Paper},
+    abstract = {Blockchain technology has emerged as the cornerstone of many decentralized applications operating among otherwise untrusted peers. However, it is well known that existing blockchain systems do not scale well. Transactions are often executed and committed sequentially in order to maintain the same view of the total order. Furthermore, it is necessary to duplicate both transaction data and their executions in every node in the blockchain network for integrity assurance. Such storage and computation requirements put significant burdens on the blockchain system, not only limiting system scalability but also undermining system security and robustness by making the network more centralized. To tackle these problems, in this paper, we propose SlimChain, a novel blockchain system that scales transactions through off-chain storage and parallel processing. Advocating a stateless design, SlimChain maintains only the short commitments of ledger states on-chain while dedicating transaction executions and data storage to off-chain nodes. To realize SlimChain, we propose new schemes for off-chain smart contract execution, on-chain transaction validation, and state commitment. We also propose optimizations to reduce network transmissions and a new sharding technique to improve system scalability further. Extensive experiments are conducted to validate the performance of the proposed SlimChain system. Compared with the existing systems, SlimChain reduces the on-chain storage requirements by 97\% \textasciitilde~99\%, while also improving the peak throughput by 1.4X \textasciitilde~15.6X.},
+    keywords = {selected},
+}
