@@ -31,10 +31,6 @@
 \RequirePackage[table,dvipsnames]{xcolor}
 
 % hyperref setting
-% Ref: https://tex.stackexchange.com/q/605854
-\@ifl@t@r\fmtversion{2021-06-01}%
- {\AddToHook{package/after/xmpincl}
-   {\patchcmd\mcs@xmpincl@patchFile{\if\par}{\ifx\par}{}{\fail}}}{}
 \RequirePackage[a-1b]{pdfx}
 \RequirePackage{hyperref}
 \hypersetup{
