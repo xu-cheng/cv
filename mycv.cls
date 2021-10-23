@@ -117,8 +117,17 @@
   % \entry{<title>}{<date>}
   \newcommand*{\entry}[2]{\item \textbf{##1}\printdate{##2}}%
   \begin{itemize}[leftmargin=0pt,label={}]%
-    }{%
-\end{itemize}%
+}{%
+  \end{itemize}%
+}
+
+% \begin{summary}
+%  summary
+% \end{summary}
+\newenvironment{summary}{%
+  \begin{adjustwidth}{\dimexpr\Gm@rmargin-\Gm@lmargin\relax}{}
+}{%
+  \end{adjustwidth}
 }
 
 % Header
