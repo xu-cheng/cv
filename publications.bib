@@ -367,3 +367,24 @@
     abstract = {Blockchain technology has emerged as the cornerstone of many decentralized applications operating among otherwise untrusted peers. However, it is well known that existing blockchain systems do not scale well. Transactions are often executed and committed sequentially in order to maintain the same view of the total order. Furthermore, it is necessary to duplicate both transaction data and their executions in every node in the blockchain network for integrity assurance. Such storage and computation requirements put significant burdens on the blockchain system, not only limiting system scalability but also undermining system security and robustness by making the network more centralized. To tackle these problems, in this paper, we propose SlimChain, a novel blockchain system that scales transactions through off-chain storage and parallel processing. Advocating a stateless design, SlimChain maintains only the short commitments of ledger states on-chain while dedicating transaction executions and data storage to off-chain nodes. To realize SlimChain, we propose new schemes for off-chain smart contract execution, on-chain transaction validation, and state commitment. We also propose optimizations to reduce network transmissions and a new sharding technique to improve system scalability further. Extensive experiments are conducted to validate the performance of the proposed SlimChain system. Compared with the existing systems, SlimChain reduces the on-chain storage requirements by 97\% \textasciitilde~99\%, while also improving the peak throughput by 1.4X \textasciitilde~15.6X.},
     keywords = {selected},
 }
+
+@inproceedings{ICDE22:vchain-plus,
+    author = {Wang, Haixin
+              and Xu, Cheng
+              and Zhang, Ce
+              and Xu, Jianliang
+              and Peng, Zhe
+              and Pei, Jian},
+    author+an = {2=highlight},
+    title = {{vChain+}: Optimizing Verifiable Blockchain Boolean Range Queries},
+    booktitle = {Proceedings of the 38th IEEE International Conference on Data Engineering (\textbf{ICDE '22})},
+    year = {2022},
+    month = {5},
+    address = {Kuala Lumpur, Malaysia},
+    eprint_url = {https://xuc.me/file/paper/ICDE22.pdf},
+    techreport_url = {https://xuc.me/file/techreport/ICDE22.pdf},
+    code_url = {https://github.com/hkbudb/vchain-plus},
+    addendum = {Full Paper},
+    abstract = {Blockchain has recently gained massive attention thanks to the success of cryptocurrencies and decentralized applications. With immutability and tamper-resistance features, it can be seen as a promising secure database solution. To address the need of searches over blockchain databases, prior work vChain proposed a novel verifiable processing framework that ensures query integrity without maintaining a full copy of the blockchain database. It however suffers from several limitations, including linear-scan search performance in the worst case and impractical public key management. In this paper, we propose a new searchable blockchain system, vChain+, that supports efficient verifiable boolean range queries with additional features. Specifically, we propose a sliding window accumulator index to achieve efficient query processing even for the worst case. We also design an object registration index to enable practical public key management without compromising the security guarantee. To support richer queries, we employ optimal tree-based indexes to index both keywords and numerical attributes of the data objects. Several optimizations are also proposed to further improve the query performance. Security analysis and empirical study validate the robustness and performance improvement of the proposed system. Compared with vChain, vChain+ improves the query performance by up to 913X.},
+    keywords = {selected},
+}
