@@ -128,7 +128,6 @@
     eprint_url = {https://xuc.me/file/paper/MDM18.pdf},
     addendum = {Full Paper},
     abstract = {With the prevalence of location-based services and geo-functioned devices, the trend of spatial data outsourcing is rising. In the data outsourcing scenario, result integrity must be ensured by means of a query authentication scheme. However, most of the existing studies are confined to a centralized environment. In this paper, we investigate the query authentication problem in distributed environments and focus on the $k$ nearest neighbor (kNN) query, which is widely used in spatial data analytics. We design a new distributed spatial authenticated data structure (ADS), distributed MR-tree, to facilitate efficient kNN processing. Furthermore, we propose a basic algorithm to process authenticated kNN queries based on the new ADS. Apart from the results, some verification objects are generated to guarantee the results’ integrity. We also design two optimized algorithms to reduce the size of verification objects as well as the verification cost. Our experiments validate the good performance of the proposed techniques in terms of query cost, communication overhead, and verification time.},
-    keywords = {selected},
 }
 
 @inproceedings{SIGMOD19:vchain,
@@ -256,7 +255,6 @@
     code_url = {https://github.com/hkbudb/vchain-demo},
     addendum = {Demo Paper},
     abstract = {This demonstration presents vChain, a blockchain system that ensures query integrity. With the proliferation of blockchain applications and services, there has been an increasing demand for querying the data stored in a blockchain database. However, existing solutions either are at the risk of losing query integrity, or require users to maintain a full copy of the blockchain database. In comparison, by employing a novel verifiable query processing framework, vChain enables a lightweight user to authenticate the query results returned from a potentially untrusted service provider. We demonstrate its verifiable query operations, usability, and performance with visualization for better insights. We also showcase how users can detect falsified results in the case that the service provider is compromised.},
-    keywords = {selected},
 }
 
 @inproceedings{Middleware20:GRuB,
@@ -268,7 +266,7 @@
               and Xu, Jianliang},
     author+an = {5=highlight},
     title = {Cost-Effective Data Feeds to Blockchains via Workload-Adaptive Data Replication},
-    booktitle = {Proceedings of the 21st International Middleware Conference (\textbf{Middleware '20})},
+    booktitle = {Proceedings of the 21st ACM/IFIP International Middleware Conference (\textbf{Middleware '20})},
     year = {2020},
     month = {12},
     address = {Delft, Netherlands},
@@ -277,7 +275,6 @@
     url = {https://doi.org/10.1145/3423211.3425696},
     addendum = {Full Paper},
     abstract = {Feeding external data to a blockchain, a.k.a. data feed, is an essential task to enable blockchain interoperability and support emerging cross-domain applications, notably stablecoins. Given the data-intensive feeds in real life (e.g.,~high-frequency price updates) and the high cost in using blockchain, namely Gas, it is imperative to reduce the Gas cost of data feeds. Motivated by the constant-changing workloads in finance and other applications, this work focuses on designing a \emph{dynamic, workload-aware} approach for cost effectiveness in Gas. This design space is understudied in the existing blockchain research which has so far focused on static data placement. \par This work presents GRuB, a cost-effective data feed that dynamically replicates data between the blockchain and an off-chain cloud storage. GRuB's data replication is workload-adaptive by monitoring the current workload and making online decisions w.r.t.~data replication. A series of online algorithms are proposed that achieves the bounded worst-case cost in blockchain's Gas. GRuB runs the decision-making components on the untrusted cloud off-chain for lower Gas costs, and employs a security protocol to authenticate the data transferred between the blockchain and cloud. The overall GRuB system can autonomously achieve low Gas costs with changing workloads. \par We built a GRuB prototype functional with Ethereum and Google LevelDB, and supported real applications in stablecoins. Under real workloads collected from the Ethereum contract-call history and mixed workloads of YCSB, we systematically evaluate GRuB's cost which shows a saving of Gas by 10\% \~{} 74\%, with comparison to the baselines of static data-placement.},
-    keywords = {selected},
 }
 
 @inproceedings{ICDE21:blockchain-keyword-search,
@@ -389,8 +386,64 @@
     number = {11},
     pages = {2761--2773},
     doi = {10.14778/3551793.3551829},
+    url = {https://doi.org/10.14778/3551793.3551829},
     eprint_url = {https://xuc.me/file/paper/PVLDB22.pdf},
+    slides_url = {https://xuc.me/file/slides/PVLDB22.pdf},
+    poster_url = {https://xuc.me/file/poster/PVLDB22.pdf},
     code_url = {https://github.com/IDEAL-Lab/shapley-value-independent-utility},
     addendum = {Full Paper},
     abstract = {In many applications, an organization may want to acquire data from many data owners. Facilities like data marketplaces allow data owners to produce data assemblage needed by data buyers through coalition. To encourage coalitions to produce data, it is critical to allocate revenue to data owners in a fair manner according to their contributions. Although in literature Shapley fairness and alternatives have been well explored to facilitate revenue allocation in data assemblage, computing exact Shapley value for many data owners and large assembled data sets through coalition remains challenging due to the combinatoric nature of Shapley value. In this paper, we explore the decomposability of utility in data assemblage by formulating the independent utility assumption. We argue that independent utility enjoys many applications. Moreover, we identify interesting properties of independent utility and develop fast computation techniques for exact Shapley value under independent utility. Our experimental results on a series of benchmark data sets show that our new approach not only guarantees the exactness of Shapley value, but also achieves faster computation by orders of magnitudes.},
+    keywords = {selected},
+}
+
+@inproceedings{Middleware22:DCert,
+    author = {Ji, Yang
+              and Xu, Cheng
+              and Zhang, Ce
+              and Xu, Jianliang},
+    author+an = {2=highlight},
+    title = {{DCert}: Towards Secure, Efficient and Versatile Blockchain Light Clients},
+    booktitle = {Proceedings of the 23rd ACM/IFIP International Middleware Conference (\textbf{Middleware '22})},
+    year = {2022},
+    month = {11},
+    address = {Quebec, QC, Canada},
+    doi = {10.1145/3528535.3565250},
+    url = {https://doi.org/10.1145/3528535.3565250},
+    eprint_url = {https://xuc.me/file/paper/MIDDLEWARE22.pdf},
+    addendum = {Full Paper},
+    abstract = {Light clients have been widely used in blockchain systems to support lightweight nodes by synchronizing and verifying block headers only. However, there are two major limitations with the current light client design. First, with the ever increasing blockchain size, the cost for light clients to process and store all the block headers would soon become prohibitively high. Second, only simple queries can be supported by light clients due to the limited functionality of block headers. To address these issues, in this paper, we propose DCert, a novel decentralized certification framework, to enable \emph{superlight} clients with \emph{constant} storage and state validation costs. The main idea is to leverage a trusted enclave (e.g., Intel SGX) to recursively certify the entire history of the blockchain. With DCert, the blockchain integrity can be easily validated by superlight clients with a secure certificate. Furthermore, to support rich verifiable queries on light clients, DCert can be extended to certify authenticated indexes for different types of queries on an as-needed basis. While DCert is compatible with existing blockchain systems, its security is guaranteed by the trusted enclave. Our benchmark-based empirical study shows that DCert incurs a small certification overhead, yet it is capable of supporting efficient verifiable queries with a constant storage size of 2.97 KB and a constant bootstrapping time of 0.14 ms.},
+}
+
+@inproceedings{SIGMOD24:fedknn,
+    author = {Zhang, Xinyi
+              and Wang, Qichen
+              and Xu, Cheng
+              and Peng, Yun
+              and Xu, Jianliang},
+    author+an = {3=highlight},
+    title = {{FedKNN}: Secure Federated k-Nearest Neighbor Search},
+    booktitle = {Proceedings of the 2024 ACM SIGMOD International Conference on Management of Data (\textbf{SIGMOD '24})},
+    year = {2024},
+    month = {6},
+    address = {Santiago, Chile},
+    addendum = {Full Paper},
+    abstract = {Nearest neighbor search is a fundamental task in various domains, such as federated learning, data mining, information retrieval, and biomedicine. With the increasing need to utilize data from different organizations while respecting privacy regulations, private data federation has emerged as a promising solution. However, it is costly to directly apply existing approaches to federated k-nearest neighbor (kNN) search with difficult-to-compute distance functions, like graph or sequence similarity. To address this challenge, we propose FedKNN, a system that supports secure federated kNN search queries with a wide range of similarity measurements. Our system is equipped with a new Distribution-Aware kNN (DANN) algorithm to minimize unnecessary local computations while protecting data privacy. We further develop DANN*, a secure version of DANN that satisfies differential obliviousness. Extensive evaluations show that FedKNN outperforms state-of-the-art solutions, achieving up to 4.8$\times$ improvement on federated graph kNN search and up to 2.7$\times$ improvement on federated sequence kNN search. Additionally, our approach offers a trade-off between privacy and efficiency, providing strong privacy guarantees with minimal overhead.},
+    keywords = {selected},
+}
+
+@inproceedings{SIGMOD24:shapley-value-simple-game,
+    author = {Luo, Xuan
+              and Pei, Jian
+              and Xu, Cheng
+              and Zhang, Wenjie
+              and Xu, Jianliang},
+    author+an = {3=highlight},
+    title = {Fast Shapley Value Computation in Data Assemblage Tasks as Cooperative Simple Games},
+    booktitle = {Proceedings of the 2024 ACM SIGMOD International Conference on Management of Data (\textbf{SIGMOD '24})},
+    year = {2024},
+    month = {6},
+    address = {Santiago, Chile},
+    addendum = {Full Paper},
+    abstract = {In this paper, we tackle the challenging problem of Shapley value computation in data markets in a novel setting of data assemblage tasks with binary utility functions among data owners. By modeling these scenarios as cooperative simple games, we leverage pivotal probabilities to transform the computation into a problem of counting beneficiaries. Moreover, we make an insightful observation that the Shapley values can be computed using subsets of minimal syntheses within the inclusion-exclusion framework in combinatorics. Based on this insight, we develop a game decomposition approach and utilize techniques in Boolean function decomposition into disjunctive normal form. One interesting property of our method is that the time complexity depends only on the data owners participating in those minimal syntheses, rather than all the data owners. Extensive experiments with real data sets demonstrate a significant efficiency improvement for computing the Shapley values in data assemblage tasks modeled as simple games.},
+    keywords = {selected},
 }
