@@ -22,7 +22,6 @@
     poster_url = {https://xuc.me/file/poster/VLDBJ17.pdf},
     addendum = {Full Paper},
     abstract = {The prosperity of location-based social networking has paved the way for new applications of group-based activity planning and marketing. While such applications heavily rely on geo-social group queries (GSGQs), existing studies fail to produce a cohesive group in terms of user acquaintance. In this paper, we propose a new family of GSGQs with minimum acquaintance constraints. They are more appealing to users as they guarantee a worst-case acquaintance level in the result group. For efficient processing of GSGQs on large location-based social networks, we devise two social-aware spatial index structures, namely SaR-tree and SaR*-tree. The latter improves on the former by considering both spatial and social distances when clustering objects. Based on SaR-tree and SaR*-tree, novel algorithms are developed to process various GSGQs. Extensive experiments on real datasets Gowalla and Twitter show that our proposed methods substantially outperform the baseline algorithms under various system settings.},
-    keywords = {selected},
 }
 
 @article{TKDE:auth-aggregate-queries,
@@ -65,7 +64,7 @@
     doi = {10.1007/978-3-662-58820-8_21},
     url = {https://doi.org/10.1007/978-3-662-58820-8_21},
     addendum = {Workshop Paper},
-    abstract = {With the recent success of cryptocurrency, Blockchain’s design opens the door of building trustworthy distributed systems. A common paradigm is to repurpose the Blockchain as an append-only log that logs the application events in time order for subsequent auditing and query verification. While this paradigm reaps the security benefit, it faces technical challenges especially when being used for data-intensive applications. Instead of treating Blockchain as a time-ordered log, we propose to lay the log-structured merge tree (LSM tree) over the Blockchain for efficient and lightweight logging. Comparing other data structures, the LSM tree is advantageous in supporting efficient writes while enabling random-access reads. In our system design, only a small digest of an LSM tree is persisted in the Blockchain and minimal store operations are carried out by smart contracts. With the implementation in Ethereum/Solidity, we evaluate the proposed logging scheme and demonstrate its performance efficiency and effectiveness in cost saving.},
+    abstract = {With the recent success of cryptocurrency, Blockchain's design opens the door of building trustworthy distributed systems. A common paradigm is to repurpose the Blockchain as an append-only log that logs the application events in time order for subsequent auditing and query verification. While this paradigm reaps the security benefit, it faces technical challenges especially when being used for data-intensive applications. Instead of treating Blockchain as a time-ordered log, we propose to lay the log-structured merge tree (LSM tree) over the Blockchain for efficient and lightweight logging. Comparing other data structures, the LSM tree is advantageous in supporting efficient writes while enabling random-access reads. In our system design, only a small digest of an LSM tree is persisted in the Blockchain and minimal store operations are carried out by smart contracts. With the implementation in Ethereum/Solidity, we evaluate the proposed logging scheme and demonstrate its performance efficiency and effectiveness in cost saving.},
 }
 
 @inproceedings{ICDE18:auth-aggregate-queries,
@@ -127,7 +126,7 @@
     url = {https://doi.org/10.1109/mdm.2018.00034},
     eprint_url = {https://xuc.me/file/paper/MDM18.pdf},
     addendum = {Full Paper},
-    abstract = {With the prevalence of location-based services and geo-functioned devices, the trend of spatial data outsourcing is rising. In the data outsourcing scenario, result integrity must be ensured by means of a query authentication scheme. However, most of the existing studies are confined to a centralized environment. In this paper, we investigate the query authentication problem in distributed environments and focus on the $k$ nearest neighbor (kNN) query, which is widely used in spatial data analytics. We design a new distributed spatial authenticated data structure (ADS), distributed MR-tree, to facilitate efficient kNN processing. Furthermore, we propose a basic algorithm to process authenticated kNN queries based on the new ADS. Apart from the results, some verification objects are generated to guarantee the results’ integrity. We also design two optimized algorithms to reduce the size of verification objects as well as the verification cost. Our experiments validate the good performance of the proposed techniques in terms of query cost, communication overhead, and verification time.},
+    abstract = {With the prevalence of location-based services and geo-functioned devices, the trend of spatial data outsourcing is rising. In the data outsourcing scenario, result integrity must be ensured by means of a query authentication scheme. However, most of the existing studies are confined to a centralized environment. In this paper, we investigate the query authentication problem in distributed environments and focus on the $k$ nearest neighbor (kNN) query, which is widely used in spatial data analytics. We design a new distributed spatial authenticated data structure (ADS), distributed MR-tree, to facilitate efficient kNN processing. Furthermore, we propose a basic algorithm to process authenticated kNN queries based on the new ADS. Apart from the results, some verification objects are generated to guarantee the results' integrity. We also design two optimized algorithms to reduce the size of verification objects as well as the verification cost. Our experiments validate the good performance of the proposed techniques in terms of query cost, communication overhead, and verification time.},
 }
 
 @inproceedings{SIGMOD19:vchain,
@@ -407,11 +406,31 @@
     year = {2022},
     month = {11},
     address = {Quebec, QC, Canada},
+    pages = {269--280},
     doi = {10.1145/3528535.3565250},
     url = {https://doi.org/10.1145/3528535.3565250},
     eprint_url = {https://xuc.me/file/paper/MIDDLEWARE22.pdf},
     addendum = {Full Paper},
     abstract = {Light clients have been widely used in blockchain systems to support lightweight nodes by synchronizing and verifying block headers only. However, there are two major limitations with the current light client design. First, with the ever increasing blockchain size, the cost for light clients to process and store all the block headers would soon become prohibitively high. Second, only simple queries can be supported by light clients due to the limited functionality of block headers. To address these issues, in this paper, we propose DCert, a novel decentralized certification framework, to enable \emph{superlight} clients with \emph{constant} storage and state validation costs. The main idea is to leverage a trusted enclave (e.g., Intel SGX) to recursively certify the entire history of the blockchain. With DCert, the blockchain integrity can be easily validated by superlight clients with a secure certificate. Furthermore, to support rich verifiable queries on light clients, DCert can be extended to certify authenticated indexes for different types of queries on an as-needed basis. While DCert is compatible with existing blockchain systems, its security is guaranteed by the trusted enclave. Our benchmark-based empirical study shows that DCert incurs a small certification overhead, yet it is capable of supporting efficient verifiable queries with a constant storage size of 2.97 KB and a constant bootstrapping time of 0.14 ms.},
+}
+
+@inproceedings{FAST24:cole,
+    author = {Zhang, Ce
+              and Xu, Cheng
+              and Hu, Haibo
+              and Xu, Jianliang},
+    author+an = {2=highlight},
+    title = {{COLE}: A Column-based Learned Storage for Blockchain Systems},
+    booktitle = {Proceedings of the 22nd USENIX Conference on File and Storage Technologies (\textbf{FAST '24})},
+    year = {2024},
+    month = {2},
+    address = {Santa Clara, CA, USA},
+    eprint_url = {https://xuc.me/file/paper/FAST24.pdf},
+    techreport_url = {https://xuc.me/file/techreport/FAST24.pdf},
+    code_url = {https://github.com/hkbudb/cole},
+    addendum = {Full Paper},
+    abstract = {Blockchain systems suffer from high storage costs as every node needs to store and maintain the entire blockchain data. After investigating Ethereum's storage, we find that the storage cost mostly comes from the index, i.e., Merkle Patricia Trie (MPT). To support provenance queries, MPT persists the index nodes during the data update, which adds too much storage overhead. To reduce the storage size, an initial idea is to leverage the emerging learned index technique, which has been shown to have a smaller index size and more efficient query performance. However, directly applying it to the blockchain storage results in even higher overhead owing to the requirement of persisting index nodes and the learned index's large node size. To tackle this, we propose COLE, a novel column-based learned storage for blockchain systems. We follow the column-based database design to contiguously store each state's historical values, which are indexed by learned models to facilitate efficient data retrieval and provenance queries. We develop a series of write-optimized strategies to realize COLE in disk environments. Extensive experiments are conducted to validate the performance of the proposed COLE system. Compared with MPT, COLE reduces the storage size by up to 94\% while improving the system throughput by $1.4\times$--$5.4\times$.},
+    keywords = {selected},
 }
 
 @inproceedings{SIGMOD24:fedknn,
@@ -426,6 +445,9 @@
     year = {2024},
     month = {6},
     address = {Santiago, Chile},
+    doi = {10.1145/3639266},
+    eprint_url = {https://xuc.me/file/paper/SIGMOD24a.pdf},
+    techreport_url = {https://xuc.me/file/techreport/SIGMOD24a.pdf},
     addendum = {Full Paper},
     abstract = {Nearest neighbor search is a fundamental task in various domains, such as federated learning, data mining, information retrieval, and biomedicine. With the increasing need to utilize data from different organizations while respecting privacy regulations, private data federation has emerged as a promising solution. However, it is costly to directly apply existing approaches to federated k-nearest neighbor (kNN) search with difficult-to-compute distance functions, like graph or sequence similarity. To address this challenge, we propose FedKNN, a system that supports secure federated kNN search queries with a wide range of similarity measurements. Our system is equipped with a new Distribution-Aware kNN (DANN) algorithm to minimize unnecessary local computations while protecting data privacy. We further develop DANN*, a secure version of DANN that satisfies differential obliviousness. Extensive evaluations show that FedKNN outperforms state-of-the-art solutions, achieving up to 4.8$\times$ improvement on federated graph kNN search and up to 2.7$\times$ improvement on federated sequence kNN search. Additionally, our approach offers a trade-off between privacy and efficiency, providing strong privacy guarantees with minimal overhead.},
     keywords = {selected},
@@ -443,7 +465,12 @@
     year = {2024},
     month = {6},
     address = {Santiago, Chile},
+    doi = {10.1145/3639311},
+    eprint_url = {https://xuc.me/file/paper/SIGMOD24b.pdf},
+    techreport_url = {https://xuc.me/file/techreport/SIGMOD24b.pdf},
+    code_url = {https://github.com/IDEAL-Lab/shapley-value-simple-game},
     addendum = {Full Paper},
     abstract = {In this paper, we tackle the challenging problem of Shapley value computation in data markets in a novel setting of data assemblage tasks with binary utility functions among data owners. By modeling these scenarios as cooperative simple games, we leverage pivotal probabilities to transform the computation into a problem of counting beneficiaries. Moreover, we make an insightful observation that the Shapley values can be computed using subsets of minimal syntheses within the inclusion-exclusion framework in combinatorics. Based on this insight, we develop a game decomposition approach and utilize techniques in Boolean function decomposition into disjunctive normal form. One interesting property of our method is that the time complexity depends only on the data owners participating in those minimal syntheses, rather than all the data owners. Extensive experiments with real data sets demonstrate a significant efficiency improvement for computing the Shapley values in data assemblage tasks modeled as simple games.},
     keywords = {selected},
 }
+
