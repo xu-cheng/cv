@@ -45,7 +45,6 @@
     poster_url = {https://xuc.me/file/poster/TKDE18.pdf},
     addendum = {Full Paper},
     abstract = {With recent advances in data-as-a-service (DaaS) and cloud computing, aggregate query services over set-valued data are becoming widely available for business intelligence that drives decision making. However, as the service provider is often a third-party delegate of the data owner, the integrity of the query results cannot be guaranteed and  is thus imperative to be authenticated. Unfortunately, existing query authentication techniques either do not work for set-valued data or they lack data confidentiality. In this paper, we propose authenticated aggregate queries over set-valued data that not only ensure the integrity of query results but also preserve the confidentiality of source data. As many aggregate queries are composed of multiset operations such as set union and subset, we first develop a family of privacy-preserving authentication protocols for primitive multiset operations. Using these protocols as building blocks, we present a privacy-preserving authentication framework for various aggregate queries and further optimize their authentication performance. Security analysis and empirical evaluation show that our proposed privacy-preserving authentication techniques are feasible and robust under a wide range of system workloads.},
-    keywords = {selected},
 }
 
 @inproceedings{WTSC18:auth-smart-contracts,
@@ -295,7 +294,6 @@
     slides_url = {https://xuc.me/file/slides/ICDE21.pdf},
     addendum = {Full Paper},
     abstract = {Blockchain has emerged as a promising solution for secure data storage and retrieval for decentralized applications. To scale blockchain systems, a prevailing approach is to employ a hybrid storage model, where only small meta-data are stored on-chain while the raw data are outsourced to an off-chain storage service provider. The key issue for query processing in such a system is the design of \emph{gas}-efficient authenticated data structure (ADS) to authenticate the query results. In this paper, we study novel ADS schemes for authenticated keyword search in hybrid-storage blockchains. We first propose the suppressed Merkle inverted (Merkle$^{inv}$) index, which maintains only a partial ADS structure on-chain that can be securely updated with a logarithm-sized cryptographic proof. Moreover, we propose a Chameleon inverted (Chameleon$^{inv}$) index that leverages the chameleon vector commitment to achieve a constant maintenance cost. It is further optimized with Bloom filters to enhance the query and verification performance. We prove the security of the proposed ADS schemes and evaluate their performance using real datasets on the Ethereum platform. Experimental results show that, compared to a baseline solution, the proposed Merkle$^{inv}$ and Chameleon$^{inv}$ indexes reduce the average on-chain maintenance cost from US\$11.21 down to US\$2.69 and US\$0.24, respectively, without sacrificing much the query performance.},
-    keywords = {selected},
 }
 
 @inproceedings{SIGMOD21:p2b-trace,
@@ -318,7 +316,6 @@
     video_url = {https://www.youtube.com/watch?v=K_RtNmMjUZ8},
     addendum = {Short Paper},
     abstract = {The eruption of a pandemic, such as COVID-19, can cause an unprecedented global crisis. Contact tracing, as a pillar of communicable disease control in public health for decades, has shown its effectiveness on pandemic control. Despite intensive research on contact tracing, existing schemes are vulnerable to attacks and can hardly simultaneously meet the requirements of data integrity and user privacy. The design of a privacy-preserving contact tracing framework to ensure the integrity of the tracing procedure has not been sufficiently studied and remains a challenge. In this paper, we propose {P\textsuperscript{2}B-Trace}, a privacy-preserving contact tracing initiative based on blockchain. First, we design a decentralized architecture with blockchain to record an authenticated data structure of the user's contact records, which prevents the user from intentionally modifying his local records afterward. Second, we develop a zero-knowledge proximity verification scheme to further verify the user's proximity claim while protecting user privacy. We implement {P\textsuperscript{2}B-Trace} and conduct experiments to evaluate the cost of privacy-preserving tracing integrity verification. The evaluation results demonstrate the effectiveness of our proposed system.},
-    keywords = {selected},
 }
 
 @article{PVLDB:slimchain,
@@ -326,7 +323,7 @@
               and Zhang, Ce
               and Xu, Jianliang
               and Pei, Jian},
-    author+an = {1=highlight,dagger;2=dagger},
+    author+an = {1=highlight},
     title = {{SlimChain}: Scaling Blockchain Transactions through Off-Chain Storage and Parallel Processing},
     journal = {Proceedings of the VLDB Endowment (\textbf{PVLDB})},
     year = {2021},
@@ -365,6 +362,7 @@
     url = {https://doi.org/10.1109/ICDE53745.2022.00190},
     eprint_url = {https://xuc.me/file/paper/ICDE22.pdf},
     techreport_url = {https://xuc.me/file/techreport/ICDE22.pdf},
+    poster_url = {https://xuc.me/file/poster/ICDE22.pdf},
     code_url = {https://github.com/hkbudb/vchain-plus},
     addendum = {Full Paper},
     abstract = {Blockchain has recently gained massive attention thanks to the success of cryptocurrencies and decentralized applications. With immutability and tamper-resistance features, it can be seen as a promising secure database solution. To address the need of searches over blockchain databases, prior work vChain proposed a novel verifiable processing framework that ensures query integrity without maintaining a full copy of the blockchain database. It however suffers from several limitations, including linear-scan search performance in the worst case and impractical public key management. In this paper, we propose a new searchable blockchain system, vChain+, that supports efficient verifiable boolean range queries with additional features. Specifically, we propose a sliding window accumulator index to achieve efficient query processing even for the worst case. We also design an object registration index to enable practical public key management without compromising the security guarantee. To support richer queries, we employ optimal tree-based indexes to index both keywords and numerical attributes of the data objects. Several optimizations are also proposed to further improve the query performance. Security analysis and empirical study validate the robustness and performance improvement of the proposed system. Compared with vChain, vChain+ improves the query performance by up to 913X.},
@@ -425,11 +423,37 @@
     year = {2024},
     month = {2},
     address = {Santa Clara, CA, USA},
+    pages = {329--345},
+    url = {https://www.usenix.org/conference/fast24/presentation/zhang-ce},
     eprint_url = {https://xuc.me/file/paper/FAST24.pdf},
     techreport_url = {https://xuc.me/file/techreport/FAST24.pdf},
+    slides_url = {https://xuc.me/file/slides/FAST24.pdf},
     code_url = {https://github.com/hkbudb/cole},
     addendum = {Full Paper},
     abstract = {Blockchain systems suffer from high storage costs as every node needs to store and maintain the entire blockchain data. After investigating Ethereum's storage, we find that the storage cost mostly comes from the index, i.e., Merkle Patricia Trie (MPT). To support provenance queries, MPT persists the index nodes during the data update, which adds too much storage overhead. To reduce the storage size, an initial idea is to leverage the emerging learned index technique, which has been shown to have a smaller index size and more efficient query performance. However, directly applying it to the blockchain storage results in even higher overhead owing to the requirement of persisting index nodes and the learned index's large node size. To tackle this, we propose COLE, a novel column-based learned storage for blockchain systems. We follow the column-based database design to contiguously store each state's historical values, which are indexed by learned models to facilitate efficient data retrieval and provenance queries. We develop a series of write-optimized strategies to realize COLE in disk environments. Extensive experiments are conducted to validate the performance of the proposed COLE system. Compared with MPT, COLE reduces the storage size by up to 94\% while improving the system throughput by $1.4\times$--$5.4\times$.},
+    keywords = {selected},
+}
+
+@inproceedings{ICDE24:v2fs,
+    author = {Wang, Haixin
+              and Xu, Cheng
+              and Chen, Xiaojie
+              and Zhang, Ce
+              and Hu, Haibo
+              and Tian, Shikun
+              and Yan, Ying
+              and Xu, Jianliang},
+    author+an = {2=highlight},
+    title = {{V\textsuperscript{2}FS}: A Verifiable Virtual Filesystem for Multi-Chain Query Authentication},
+    booktitle = {Proceedings of the 40th IEEE International Conference on Data Engineering (\textbf{ICDE '24})},
+    year = {2024},
+    month = {5},
+    address = {Utrecht, Netherlands},
+    eprint_url = {https://xuc.me/file/paper/ICDE24.pdf},
+    techreport_url = {https://xuc.me/file/techreport/ICDE24.pdf},
+    poster_url = {https://xuc.me/file/poster/ICDE24.pdf},
+    addendum = {Full Paper},
+    abstract = {The rise of decentralized finance (DeFi), Web 3.0, and other blockchain-based applications has led to an increased demand for on-chain data analysis across multiple blockchains. Conducting advanced queries, such as data aggregation and correlation analysis, is essential for gaining valuable insights in this context. However, multi-chain queries pose several challenges for the querying system, including compatibility with existing blockchains, supporting diverse query types, and ensuring the integrity of query results. To tackle these challenges, we propose a novel paradigm called \emph{verifiable virtual filesystem} (V\textsuperscript{2}FS). V\textsuperscript{2}FS extends the POSIX I/O interface, shifting the focus from verifying computation to verifying data. This innovative approach empowers query clients to leverage an off-the-shelf database engine to evaluate queries using verifiable data retrieved from an indexing service provider (ISP). Our solution ensures strong integrity guarantees and can be smoothly integrated with existing database engines to support various query types. To achieve blockchain compatibility, we utilize the DCert framework to certify blocks from different blockchains, making our system applicable to various blockchain systems. Furthermore, we propose cache-based algorithms and a bloom filter-integrated algorithm to optimize query performance and minimize network communication costs. Security analysis and empirical study validate the effectiveness and efficiency of the proposed system.},
     keywords = {selected},
 }
 
@@ -446,6 +470,7 @@
     month = {6},
     address = {Santiago, Chile},
     doi = {10.1145/3639266},
+    url = {https://doi.org/10.1145/3639266},
     eprint_url = {https://xuc.me/file/paper/SIGMOD24a.pdf},
     techreport_url = {https://xuc.me/file/techreport/SIGMOD24a.pdf},
     addendum = {Full Paper},
@@ -466,6 +491,7 @@
     month = {6},
     address = {Santiago, Chile},
     doi = {10.1145/3639311},
+    url = {https://doi.org/10.1145/3639311},
     eprint_url = {https://xuc.me/file/paper/SIGMOD24b.pdf},
     techreport_url = {https://xuc.me/file/techreport/SIGMOD24b.pdf},
     code_url = {https://github.com/IDEAL-Lab/shapley-value-simple-game},
