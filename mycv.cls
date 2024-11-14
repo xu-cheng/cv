@@ -195,6 +195,10 @@
   sorting=ddatent,
 ]{biblatex}
 
+\AtEveryBibitem{
+  \clearfield{addendum}
+}
+
 % declare custom field `usera` as the starting page
 % Ref: https://tex.stackexchange.com/a/485880/16996
 \DeclareSourcemap{
@@ -264,7 +268,6 @@
 \renewcommand*{\mkbibnamefamily}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}\ifitemannotation{dagger}{\textsuperscript{\textdagger}}}
 \renewcommand*{\mkbibnameprefix}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}}
 \renewcommand*{\mkbibnamesuffix}[1]{\ifitemannotation{highlight}{\mkbibbold{#1}}{#1}}
-\DeclareFieldFormat{addendum}{\textcolor{Gray}{#1}}
 \defbibenvironment{bibliography}{\begin{enumerate}}{\end{enumerate}}{\item}
 
 \NewDocumentCommand{\publications}{o m}{%
