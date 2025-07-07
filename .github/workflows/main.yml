@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Set up Git repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Compile LaTeX document
-      uses: xu-cheng/latex-action@v3
+      uses: xu-cheng/latex-action@v4
       with:
         root_file: cv.tex
         latexmk_use_lualatex: true
