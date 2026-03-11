@@ -457,7 +457,6 @@
     poster_url = {https://xuc.me/file/poster/ICDE24.pdf},
     addendum = {Full Paper},
     abstract = {The rise of decentralized finance (DeFi), Web 3.0, and other blockchain-based applications has led to an increased demand for on-chain data analysis across multiple blockchains. Conducting advanced queries, such as data aggregation and correlation analysis, is essential for gaining valuable insights in this context. However, multi-chain queries pose several challenges for the querying system, including compatibility with existing blockchains, supporting diverse query types, and ensuring the integrity of query results. To tackle these challenges, we propose a novel paradigm called \emph{verifiable virtual filesystem} (V\textsuperscript{2}FS). V\textsuperscript{2}FS extends the POSIX I/O interface, shifting the focus from verifying computation to verifying data. This innovative approach empowers query clients to leverage an off-the-shelf database engine to evaluate queries using verifiable data retrieved from an indexing service provider (ISP). Our solution ensures strong integrity guarantees and can be smoothly integrated with existing database engines to support various query types. To achieve blockchain compatibility, we utilize the DCert framework to certify blocks from different blockchains, making our system applicable to various blockchain systems. Furthermore, we propose cache-based algorithms and a bloom filter-integrated algorithm to optimize query performance and minimize network communication costs. Security analysis and empirical study validate the effectiveness and efficiency of the proposed system.},
-    keywords = {selected},
 }
 
 @inproceedings{SIGMOD24:fedknn,
@@ -524,4 +523,22 @@
     eprint_url = {https://xuc.me/file/paper/SIGMOD25.pdf},
     addendum = {Demo Paper},
     abstract = {This demonstration showcases a verifiable multi-chain querying system. The proliferation of blockchain-driven applications has created a demand for on-chain data analysis across multiple blockchains. However, existing solutions face challenges in seamlessly integrating with existing blockchains, maintaining compatible with various database engines, and ensuring the integrity of query results. In response, we develop a blockchain indexing system that utilizes a novel verifiable virtual filesystem (V\textsuperscript{2}FS) for query authentication. Our demonstration focuses on highlighting the key features of our system, including blockchain data indexing, verifiable multi-chain query processing, and the usability and performance of our solution. Additionally, we provide an interactive visualization module to enhance attendees' understanding and insights.},
+}
+
+@inproceedings{ICDE26:cole-plus,
+    author = {Zhang, Ce
+              and Xu, Cheng
+              and Hu, Haibo
+              and Xu, Jianliang},
+    author+an = {2=highlight},
+    title = {{COLE\textsuperscript{+}}: Towards Practical Column-based Learned Storage for Blockchain Systems},
+    booktitle = {Proceedings of the 42nd IEEE International Conference on Data Engineering (\textbf{ICDE '26})},
+    year = {2026},
+    month = {5},
+    address = {Montreal, QC, Canada},
+    eprint_url = {https://xuc.me/file/paper/ICDE26.pdf},
+    techreport_url = {https://xuc.me/file/techreport/ICDE26.pdf},
+    addendum = {Full Paper},
+    abstract = {Blockchain provides a decentralized and tamper-resistant ledger for securely recording transactions across a network of untrusted nodes. While its transparency and integrity are beneficial, the substantial storage requirements for maintaining a complete transaction history present significant challenges. For example, Ethereum nodes require around 23TB of storage, with an annual growth rate of 4TB. Prior studies have employed various strategies to mitigate the storage challenges. Notably, COLE significantly reduces storage size and improves throughput by adopting a column-based design that incorporates a learned index, effectively eliminating data duplication in the storage layer. However, this approach has limitations in supporting chain reorganization during blockchain forks and state pruning to minimize storage overhead. In this paper, we propose COLE\textsuperscript{+}, an enhanced storage solution designed to address these limitations. COLE\textsuperscript{+} incorporates a novel rewind‐supported in-memory tree structure for handling chain reorganization, leveraging content‐defined chunking (CDC) to maintain a consistent hash digest for each block. For on‐disk storage, a new two-level Merkle Hash Tree (MHT) structure, called prunable version tree, is developed to facilitate efficient state pruning. Both theoretical and empirical analyses show the effectiveness of COLE\textsuperscript{+} and its potential for practical application in real-world blockchain systems.},
+    keywords = {selected},
 }
